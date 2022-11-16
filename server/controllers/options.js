@@ -2,6 +2,8 @@
 const fetch = require('node-fetch')
 const nasdadList = require('../models/nasdaq100.json')
 
+//Key here
+//Key here
 
 
 const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
