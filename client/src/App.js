@@ -6,13 +6,19 @@ import { useState } from 'react'
 function App() {
 
   const [isHover, setIsHover] = useState(false);
+  const [footerVisible, setFooterVisible] = useState(false);
+
+
 
   return (
     <>
-      <div className='bigContainer'></div>
-      <div className={isHover ? "rocketButton" : "rocketButtonOff"}>
-        <NavBar setIsHover={setIsHover}></NavBar>
-        <Footer></Footer>
+      <div className="App">
+        <div className={isHover ? "rocketButton" : ""}>
+          <NavBar setIsHover={setIsHover} setFooterVisible={setFooterVisible} ></NavBar>
+        </div>
+        <div className={isHover ? "rocketButton" : footerVisible ? "heroFooter" : "hero"}>
+          <Footer></Footer>
+        </div>
       </div>
     </>
 

@@ -14,7 +14,7 @@ import { useRef } from 'react';
 var weekday = require('dayjs/plugin/weekday')
 
 
-function MultipleForm({ formVisible }) {
+function MultipleForm({ formVisible, setFooterVisible }) {
 
   const [ticksName, setTicksName] = useState([]);
 
@@ -59,6 +59,7 @@ function MultipleForm({ formVisible }) {
 
   function handleSubmit(e) {
     e.preventDefault()
+    setFooterVisible(true)
     setDataToRender([])
     setIsLoaded(false)
     elref.current?.scrollIntoView({ behavior: 'smooth' })

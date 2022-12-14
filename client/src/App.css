@@ -6,9 +6,19 @@
     font-weight: 400;
     background: -webkit-linear-gradient(to right, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: cover
+    background-size: cover;
   }
 
+  .App {
+    text-align: center;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+
+  }
 .rocketContainer{
   display: flex;
   flex-direction: row-reverse;
@@ -27,19 +37,27 @@
 .rocketButton {
   background-color: black;
 }
-
-.rocketButtonOff{
-   height:90vh;
-}
-
-
-.FooterContainer{
-  display: grid;
-  bottom:0;
-  /* position: absolute; */
-  width:100vw
+.FooterContainer {
+  width: 100%;
+  height: 100%;
+    display: grid;
 
 }
+
+.layer1 {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.hero {
+  width: 100%;
+  overflow: hidden;
+}
+.heroFooter {
+  width: 100%;
+}
+
 .layer1, .layer2{
   grid-column: 1;
   grid-row: 1;
@@ -51,9 +69,15 @@
 }
 .NavBar{
   background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  margin: 0;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+
 }
 .layer1{
-  min-height: 12vh;
   align-self: end;
   bottom: 0;
   /* position:absolute */
@@ -106,18 +130,7 @@ h1{
 
 }
 
-path{
-  margin:0;
-  padding:0;
-  bottom:0
 
-}
-svg{
-  margin:0;
-  padding:0;
-  bottom:0
-
-}
 
 .form:hover{
   border: 1px black ;
@@ -132,7 +145,7 @@ svg{
   border-style: groove;
   cursor: pointer;
   font-size: 18px;
-  height: 50px;
+  min-height: 50px;
   text-align: center;
   width: 100%;
   margin-bottom: 10px;
@@ -170,7 +183,6 @@ svg{
 
 .Footer {
   background-color:white;
-  height:5vh;
   margin:0px;
   padding:0 20px 0 0;
   text-align: right;

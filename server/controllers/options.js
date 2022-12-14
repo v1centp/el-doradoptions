@@ -1,9 +1,11 @@
 'use strict'
+require('dotenv').config()
+
 const fetch = require('node-fetch')
 const nasdadList = require('../models/nasdaq100.json')
 
-//Key here
-//Key here
+const APIKEY = process.env.APIKEY
+const APIKEYNASDAQ = process.env.APIKEYNASDAQ
 
 
 const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
@@ -30,7 +32,6 @@ exports.Ticker = async (req, res) => {
 
 const MultipleStockPrice = async () => {
   try {
-    console.log("yes2")
 
     const fetchArray = MultipleCompanyTickerArray.map(stock => {
       function buildURL(stock) {
@@ -40,7 +41,6 @@ const MultipleStockPrice = async () => {
       return fetch(fetchURL);
     })
     const responseArray = await Promise.all(fetchArray)
-    console.log("yes3")
     const parsedResponseArray = responseArray.map(response => response.json());
     const allStockPrice = await Promise.all(parsedResponseArray)
     return allStockPrice
@@ -69,7 +69,6 @@ exports.AllOptionsContracts = async (req, res) => {
   tickerSelected.map(item =>
     MultipleCompanyTickerArray.push(item.ticker)
   )
-  console.log("yes1")
   try {
     const fetchArray = MultipleCompanyTickerArray.map(ticker => {
       function buildURL(ticker) {
@@ -79,7 +78,6 @@ exports.AllOptionsContracts = async (req, res) => {
       return fetch(fetchURL);
     })
     const responseArray = await Promise.all(fetchArray)
-    console.log("yes4")
     const parsedResponseArray = responseArray.map(response => response.json());
     const allOptionsContracts = await Promise.all(parsedResponseArray)
     let allOptionsTicker = []
