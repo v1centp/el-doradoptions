@@ -4,20 +4,23 @@
   }
   body {
     font-weight: 400;
-    background: 'white';
+    background: -webkit-linear-gradient(to right, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
   }
 
   .App {
+    display: flex;
     text-align: center;
     width: 100vw;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: 100vh;
+    justify-content: space-between;
 
   }
+
+
 .rocketContainer{
   display: flex;
   flex-direction: row-reverse;
@@ -36,7 +39,9 @@
 .rocketButton {
   background-color: black;
     width: 100%;
-  overflow: hidden;
+    height: 100%;
+
+
 }
 .FooterContainer {
   width: 100%;
@@ -49,15 +54,11 @@
   width: 100%;
   height: 100%;
   
-  
 }
 
 .hero {
   width: 100%;
   overflow: hidden;
-  background: -webkit-linear-gradient(to right, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 .heroFooter {
   width: 100%;

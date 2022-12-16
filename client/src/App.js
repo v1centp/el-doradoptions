@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <div className={isHover ? "rocketButton" : footerVisible ? "heroFooter" : "hero"}>
+        <div className={isHover ? "rocketButton" : ""}>
           <NavBar setIsHover={setIsHover} setFooterVisible={setFooterVisible} ></NavBar>
         </div>
         <div className={isHover ? "rocketButton" : footerVisible ? "heroFooter" : "hero"}>
