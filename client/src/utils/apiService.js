@@ -1,5 +1,4 @@
 
-require('dotenv').config()
 
 const urlTicker = process.env.REACT_APP_API_TICKER ? process.env.REACT_APP_API_TICKER : "http://localhost:3001/ticker"
 const urlAllOptionsContracts = process.env.REACT_APP_API_OPTIONS ? process.env.REACT_APP_API_OPTIONS : "http://localhost:3001/AllOptionsContracts"
